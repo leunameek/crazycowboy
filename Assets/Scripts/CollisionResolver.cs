@@ -41,6 +41,7 @@ public class CollisionResolver : MonoBehaviour
         Vector2 to = from + new Vector2(deltaX, 0);
         Vector2 halfSize = size * 0.5f - Vector2.one * detector.skinWidth;
         
+        // chequeamos si nos estampamos contra algo
         if (detector.CheckTileOverlap(to, halfSize))
         {
             float direction = Mathf.Sign(deltaX);
@@ -48,7 +49,7 @@ public class CollisionResolver : MonoBehaviour
             float safeDistance = detector.BinarySearchCollision(from, new Vector2(direction, 0), distance, halfSize);
             
             to = from + new Vector2(direction * safeDistance, 0);
-            velocity.x = 0;
+            velocity.x = 0; // frenazo en seco
 
             collisions.left = deltaX < 0;
             collisions.right = deltaX > 0;
@@ -66,6 +67,7 @@ public class CollisionResolver : MonoBehaviour
         Vector2 to = from + new Vector2(0, deltaY);
         Vector2 halfSize = size * 0.5f - Vector2.one * detector.skinWidth;
         
+        // miramos si nos damos en la cabeza o en los pies
         if (detector.CheckTileOverlap(to, halfSize))
         {
             float direction = Mathf.Sign(deltaY);
@@ -73,11 +75,11 @@ public class CollisionResolver : MonoBehaviour
             float safeDistance = detector.BinarySearchCollision(from, new Vector2(0, direction), distance, halfSize);
             
             to = from + new Vector2(0, direction * safeDistance);
-            velocity.y = 0;
+            velocity.y = 0; // Parada técnica
 
             collisions.bottom = deltaY < 0;
             collisions.top = deltaY > 0;
-            grounded = collisions.bottom;
+            grounded = collisions.bottom; // Estamos en el suelo
         }
         else
         {

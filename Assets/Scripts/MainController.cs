@@ -9,16 +9,16 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(TilemapCollisionDetector))]
 public class MainController : MonoBehaviour
 {
-    [Header("Tilemap :P")]
+    [Header("El Mapa")]
     public Tilemap tilemap;
-    [Header("Respawn")]
+    [Header("Renacer de las cenizas")]
     public Transform spawnPoint;
     public float respawnDelay = 0.4f;
-    [Header("Hazards")]
+    [Header("Cosas que matan")]
     public Hazard[] hazards;
-    [Header("Level Exits")]
+    [Header("Pa fuera")]
     public LevelExit[] levelExits;
-    [Header("Music")]
+    [Header("Musiquita")]
     public bool playLevelMusicOnStart = true;
 
     private PlayerMovement movement;
@@ -216,8 +216,6 @@ public class MainController : MonoBehaviour
     {
         isExitingLevel = true;
         
-        // Optional: Play a sound or animation here
-        
         if (!string.IsNullOrEmpty(exit.nextLevelName))
         {
             SceneManager.LoadScene(exit.nextLevelName);
@@ -231,8 +229,7 @@ public class MainController : MonoBehaviour
             }
             else
             {
-                Debug.Log("No more levels in Build Settings!");
-                // Optionally load Main Menu or restart
+                Debug.Log("Se acabaron los niveles! A casa!");
                 SceneManager.LoadScene(0); 
             }
         }

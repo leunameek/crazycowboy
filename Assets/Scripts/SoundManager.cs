@@ -4,11 +4,11 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
-    [Header("Audio Clips")]
+    [Header("SOnidossss")]
     public AudioClip jumpClip;
     public AudioClip deathClip;
 
-    [Header("Playback Settings")]
+    [Header("volumen")]
     [Range(0f, 1f)] public float jumpVolume = 1f;
     [Range(0f, 1f)] public float deathVolume = 1f;
 

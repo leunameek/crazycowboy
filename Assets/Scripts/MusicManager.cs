@@ -4,11 +4,11 @@ public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance { get; private set; }
 
-    [Header("Music Clips")]
+    [Header("Temazos")]
     public AudioClip menuMusic;
     public AudioClip levelMusic;
 
-    [Header("Volumes")]
+    [Header("Volumen")]
     [Range(0f, 1f)] public float menuVolume = 0.7f;
     [Range(0f, 1f)] public float levelVolume = 0.7f;
 

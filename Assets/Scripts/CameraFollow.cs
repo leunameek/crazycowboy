@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    [Header("A quien persigo?")]
     public Transform target;
+    [Header("Suavidad")]
     public float smoothTime = 0.25f;
+    [Header("Distancia de seguridad")]
     public Vector3 offset;
     
     private Vector3 velocity = Vector3.zero;
@@ -12,7 +15,6 @@ public class CameraFollow : MonoBehaviour
     {
         if (target != null)
         {
-            // Calculate initial offset based on current positions
             offset = transform.position - target.position;
         }
     }

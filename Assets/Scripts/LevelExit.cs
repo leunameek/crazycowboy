@@ -3,12 +3,12 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class LevelExit : MonoBehaviour
 {
-    [Header("Exit Settings")]
-    [Tooltip("Name of the specific level to load. If empty, loads the next level in Build Settings.")]
+    [Header("Configuración de Salida")]
+    [Tooltip("Nombre del nivel al que vamos.")]
     public string nextLevelName;
 
-    [Header("Collision Bounds")]
-    [Tooltip("Optional override. If left at zero, the BoxCollider2D size is used.")]
+    [Header("donde choca")]
+    [Tooltip("si lo dejas a cero, usa el tamaño del BoxCollider2D.")]
     public Vector2 sizeOverride;
     public Vector2 offset;
 

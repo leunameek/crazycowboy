@@ -3,8 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Hazard : MonoBehaviour
 {
-    [Header("Hazard Bounds")]
-    [Tooltip("Optional override. If left at zero, the BoxCollider2D size is used.")]
+    [Header("Limites del Peligro el cactus chuza")]
+    [Tooltip("Opcional. Si lo dejas a cero, usa el tamaño del BoxCollider2D")]
     public Vector2 sizeOverride;
     public Vector2 offset;
 

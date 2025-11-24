@@ -5,11 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class PlayerAnimationController : MonoBehaviour
 {
-    [Header("Animation Settings")]
-    [Tooltip("Minimum speed to trigger walk animation")]
+    [Header("Cosas de Animacion (Bailes)")]
+    [Tooltip("Velocidad minima para que mueva las patas")]
     public float walkSpeedThreshold = 0.1f;
     
-    [Tooltip("Should the sprite flip when moving left?")]
+    [Tooltip("rotar dependiendo direccion")]
     public bool flipSpriteOnDirection = true;
 
     private Animator animator;
@@ -21,8 +21,8 @@ public class PlayerAnimationController : MonoBehaviour
     private int velocityYHash;
     private int deathBoolHash;
     
-    [Header("Death Animation")]
-    [Tooltip("Bool parameter that is set true on death and false on respawn.")]
+    [Header("muerre anim")]
+    [Tooltip("si muere usamos el bool para animar")]
     public string deathBoolParam = "IsDead";
     
     void Awake()

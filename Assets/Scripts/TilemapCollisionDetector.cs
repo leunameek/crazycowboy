@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
+//que jodido hacer esto, ganas de complicarnos la perra vida, revisá la lista dieguei, ya tengo sueño
 public class TilemapCollisionDetector : MonoBehaviour
 {
-    [Header("Tilemap Reference")]
+    [Header("El mapa")]
     public Tilemap tilemap;
     
-    [Header("Collision Settings")]
+    [Header("Ajustes de Choque (Pum)")]
     public float skinWidth = 0.01f;
 
     public bool CheckTileOverlap(Vector2 center, Vector2 halfSize)
@@ -62,7 +62,7 @@ public class TilemapCollisionDetector : MonoBehaviour
         
         return CheckTileOverlap(checkPos, halfSize);
     }
-
+    // era facilito mamawevo
     public List<Vector3Int> GetOverlappingTiles(Vector2 center, Vector2 halfSize)
     {
         var tiles = new List<Vector3Int>();
@@ -74,7 +74,7 @@ public class TilemapCollisionDetector : MonoBehaviour
         Vector3Int cellMin = tilemap.WorldToCell(min);
         Vector3Int cellMax = tilemap.WorldToCell(max);
         
-        for (int x = cellMin.x; x <= cellMax.x; x++)
+        for (int x = cellMin.x; x <= cellMax.x; x++) // te tocaba poner <= bobolón, lo tenías en >
         {
             for (int y = cellMin.y; y <= cellMax.y; y++)
             {

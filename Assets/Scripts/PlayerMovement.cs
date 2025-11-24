@@ -3,12 +3,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Movimiento")]
+    [Header("mov")]
     public float moveSpeed = 6f;
     public float acceleration = 25f;
     public float friction = 15f;
     
-    [Header("Saltoo")]
+    [Header("brincos")]
     public float jumpForce = 12f;
     public float gravity = 30f;
     public float maxFallSpeed = 20f;
